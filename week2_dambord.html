@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Dambord 10x10</p>
+
+<script>
+    document.write("<table border='1' width='500' height='500' >");
+    for(var i=1; i<=10; i++)
+    {
+    document.write("<tr>");
+    for(var x=1; x<=10; x++)
+    {
+    if((i+x)%2!=0)
+    {
+    document.write("<td bgcolor='white'></td>");
+    }
+    else
+    {
+    document.write("<td bgcolor='black'></td>");
+    }
+    }
+    document.write("</tr>");
+    }
+    document.write("</table>");
+    </script>
+
+</body>
+</html>
