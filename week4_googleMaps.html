@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=Machelen,Belgie', function (data) {
+                    document.getElementById("div1").innerHTML = data.results[0].address_components[0].long_name + "<br>" + data.results[0].address_components[1].long_name;
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <h2>Laat de tekst veranderen door jQuery AJAX</h2></div>
+    <button>Ga naar de content</button>
+</body>
+
+</html>
